@@ -4,12 +4,22 @@
     "version": "1.0",
     "manifest_version": 2,
     "browser_action": {
-        "default_pop" : "hi.html",
-        "default_icon" : "pirate.png"
+        "default_pop": "hi.html",
+        "default_icon": "pirate.png"
     },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "storage",
+        "history"
+    ],
     "commands": {
         "_execute_browser_action": {
-            "suggested_key":{
+            "suggested_key": {
                 "default": "Ctrl+Shift+K",
                 "mac": "MacCtrl+Shift+K"
             },
